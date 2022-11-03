@@ -1,0 +1,307 @@
+<html>
+<head>
+<title>Muszoid - Home</title>
+<link href={{ url_for('static', filename='css/bootstrap.min.css') }} rel="stylesheet">
+<style>
+    .logo {
+        max-width: 100%;  
+        height: 45px;  
+    }
+
+    h1, p {
+        text-align: center;
+    }
+
+    .test {
+        object-fit:cover;
+        width: 1300;
+        height: 500;
+        }
+
+    .border-bottom {
+        background-color: white;
+        box-shadow: 0px 1px 10px #888888;
+
+    }
+
+    .mid {
+      text-align: center;
+    }
+
+    .test1 {
+      line-height: 50px;
+    }
+
+    .panel {
+      display:block;
+      text-decoration:none;
+    }
+
+</style>
+<script src="static/css/bootstrap.bundle.min.js"></script>
+</head>
+
+<link href={{ url_for('static', filename='static/css/headers') }} rel="stylesheet">
+<link href={{ url_for('static', filename='static/css/bootstrap.bundle.min.js') }} rel="stylesheet">
+
+
+<div class="bg-light"> 
+  
+  <div>
+    <header class="p-3 mb-3 border-bottom sticky-top">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <img class="logo" src="static/image/logo.png" alt="logo">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+          </a>
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/" class="nav-link px-5 link-secondary">Home</a></li>
+            <li><a href="{{ url_for('destination.create') }}" class="nav-link px-2 link-secondary">Create An Event</a></li>
+          </ul>
+  
+          <form class="form-inline d-flex flex-nowrap" action="{{url_for('main.search')}}" >
+            <input type="text" name="search" class="form-control flex-grow-1 my-1 mr-sm-2" id="SearchForm">
+            <button type="submit" class="flex-shrink-1 btn btn-primary my-1">Submit</button>
+          </form>
+  
+          <div class="dropdown text-end">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="static/image/icon.png" alt="mdo" width="32" height="32" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small">
+              {% if current_user.is_authenticated %}
+                <li><a class="dropdown-item" href="#">{{current_user.name}}</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="bookingpage.html">View Tickets</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{{ url_for('auth.logout') }}">Sign out</a></li>
+              {% else %}
+                <li><a class="dropdown-item" href="{{ url_for('auth.register') }}">Register</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('auth.login') }}">Log In</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+  </header>
+
+
+    
+
+
+
+<div class="container py-3">
+
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="static/image/background3.jpg" class="test" width="800" height="500" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+        
+
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Find your perfect music event.</h1>
+            <p>Discover & Buy Unique Tickets for Upcoming Music Events</p>
+            <br><br><br><br><br><br>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="static/image/background2.jpg" class="test" width="800" height="500" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Find your perfect music event.</h1>
+            <p>Discover & Buy Unique Tickets for Upcoming Music Events</p>
+            <br><br><br><br><br><br>
+        </div>
+      </div>
+      <div class="carousel-item active">
+        <img src="static/image/background4.jpg" class="test" width="800" height="500" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Find your perfect music event.</h1>
+            <p>Discover & Buy Unique Tickets for Upcoming Music Events</p>
+            <br><br><br><br><br><br>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center py-2">
+</div>
+<div class="input-group mb-3 ">
+    <div class="form-floating">
+      <input type="text" class="form-control " id="floatingInputGroup1" placeholder="Username">
+      <label for="floatingInputGroup1">Location</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+      <label for="floatingInputGroup1">Price</label>
+    </div>
+    
+    <div class="form-floating">
+        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+        <label for="floatingInputGroup1">Event Type</label>
+      </div>
+      
+      
+      
+
+    <button type="button" class="btn btn-primary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+      </svg> Search</button>
+
+  </div>
+
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-3">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Music Genre</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Rock</a></li>
+          <li><a class="dropdown-item" href="#">Jazz</a></li>
+          <li><a class="dropdown-item" href="#">Pop</a></li>
+          <li><a class="dropdown-item" href="#">...</a></li>
+        </ul>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Status</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Upcoming</a></li>
+          <li><a class="dropdown-item" href="#">Inactive</a></li>
+          <li><a class="dropdown-item" href="#">Booked</a></li>
+          <li><a class="dropdown-item" href="#">Cancelled</a></li>
+        </ul>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Distance Range</button>
+        <ul class="dropdown-menu text-center">
+            <input type="range" class="dropdown-item" min="0" max="20" step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
+            <output >10</output><output>km</output>
+        </ul>
+    </div>
+</div>
+<br><br>
+
+
+<h2>Upcoming Events</h2>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for destination in destinations %}
+    <div class="col">
+      
+      <div class="card btn1">
+        <a href={{url_for('destination.show', id=destination.id)}}>
+        <img src={{destination.image}} class="card-img-top" alt="...">
+        <div class="card-img-overlay me-2">
+          <button type="button" class="btn btn-light me-1" disabled><b>Price</b></button>
+          <button type="button" class="btn btn-light" disabled><b>Status</b></button>
+        </div>
+      </a>  
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card-body">
+            <h4 class="card-title mid">SEP<br>1</h4>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-body">
+              <h5 class="card-title panel">{{destination.name}}</h5>
+              <h6 class="card-text">{{destination.description}}</h6>
+              <h6 class="card-text">Location</h6>
+            </div>
+          </div>
+        </div>
+        
+        <ul class="list-group list-group-flush">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="card-body">
+                <img src="static/image/icon.png" alt="mdo" width="50" height="50" class="rounded-circle align-items-center">
+              </div>
+            </div>
+          
+            <div class="col-md-5">
+              <h5 class="card-body test1">Artist Name</h5>
+            </div>
+          </div>
+        </ul>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+
+
+</div>  
+</div>
+</body>
+<div class="border-bottom ">
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Product</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Key Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Ticketing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Online Promotion</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Developers</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Explore More</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">How It Work</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Download App</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Promoter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sell Tickets</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Organiser</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fundraisers</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Connect With Us</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Customer Support</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Download App</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Promoter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2022 Miszoid, Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+
+</html>

@@ -1,0 +1,346 @@
+<html>
+<head>
+<title>Page Title</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/headers.css" rel="stylesheet">
+<link href="css/5star.css" rel="stylesheet">
+<style>
+    .logo {
+        max-width: 100%;  
+        height: 45px;  
+    }
+
+    .test {
+        object-fit:cover;
+        width: 1300;
+        height: 400;
+        }
+
+    .border-bottom {
+        background-color: white;
+        box-shadow: 0px 1px 10px #888888;
+
+    }
+
+    .mid {
+      text-align: center;
+    }
+
+    .test1 {
+      line-height: 50px;
+    }
+
+
+    .panel {
+      display:block;
+      text-decoration:none;
+    }
+
+    .card-body {
+    flex: 10 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+
+}
+
+
+
+
+</style>
+<script src="css/bootstrap.bundle.min.js"></script>
+</head>
+<div class="bg-light"> 
+  
+<div >
+  <header class="p-3 mb-3 border-bottom sticky-top">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <img class="logo" src="img/logo.png" alt="logo">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="index.html" class="nav-link px-5 link-secondary">Home</a></li>
+          <li><a href="creationpage.html" class="nav-link px-2 link-secondary">Create An Event</a></li>
+
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="img/icon.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="bookingpage.html">View Tickets</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</header>
+
+
+
+
+
+
+  <div class="container py-4 ">
+
+          <img src="img/background.jpg" class="img-fluid test text-center rounded mb-3" width="800" height="500" role="img">    
+
+          
+          <div class="container mb-2">
+            <div class="row">
+              <div class="col-8">
+                <ul class="list-group list-group-flush text-start">
+                  <li class="list-group-item rounded shadow mb-3">
+                  <h2><b>Event Name</b></h2>
+                  <h3>Artist Name</h3>      
+                  <h4>Status</h4>
+                  <h6 class="link-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"></path>
+                  </svg> Venue, Location
+                </h6>
+
+                  <h6>Date and Time</h6>
+                  </li>
+                  <li class="list-group-item rounded shadow mb-3">
+                    <h4>Description</h4>  
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel velit pellentesque, bibendum neque nec, congue nisi. Suspendisse vitae nibh mi. Sed tincidunt dictum felis, id aliquet neque porta eu. Nulla aliquam, magna nec fringilla euismod, nulla est porttitor leo, vitae pharetra justo diam eget leo. Nullam et augue ut eros varius ultricies eu vitae est. Nunc vehicula mauris massa, non vestibulum velit pretium aliquet. Fusce in aliquam sapien. Aliquam id ipsum ac quam facilisis auctor. Nunc at purus vel quam tincidunt pellentesque. Integer luctus urna enim, eget congue neque lacinia sit amet.</p>  
+                  </li>
+                  <li class="list-group-item rounded shadow mb-3">
+                    <h4>Overview</h4>  
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel velit pellentesque, bibendum neque nec, congue nisi. Suspendisse vitae nibh mi. Sed tincidunt dictum felis, id aliquet neque porta eu. Nulla aliquam, magna nec fringilla euismod, nulla est porttitor leo, vitae pharetra justo diam eget leo. Nullam et augue ut eros varius ultricies eu vitae est. Nunc vehicula mauris massa, non vestibulum velit pretium aliquet. Fusce in aliquam sapien. Aliquam id ipsum ac quam facilisis auctor. Nunc at purus vel quam tincidunt pellentesque. Integer luctus urna enim, eget congue neque lacinia sit amet.</p>  
+                  </li>
+                  <li class="list-group-item rounded shadow mb-3">
+                    <h4>Reviews</h4>  
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                      <label for="floatingTextarea2">Comments</label>
+                    </div>
+                    <br>
+                    <div class="gap-2 d-md-flex ">
+                      <div class="rate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                      </div>
+                      
+                      <button class="btn btn-primary" type="button">Submit</button>
+                    </div>
+
+                    <br><br>
+
+
+
+                    <div class="card">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <div class="card-body">
+                            <img src="img/icon.png" alt="mdo" width="50" height="50" class="rounded-circle align-items-center">
+                          </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                          <h5 class="card-body test1">Reviewer's Name</h5>
+                        </div>
+                        <div class="col-sm-2">
+                          <p class="card-body test1"><b>Date</b></p>
+                        </div>
+                      </div>
+                  
+                      <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel velit pellentesque, bibendum neque nec, congue nisi. Suspendisse vitae nibh mi. Sed tincidunt dictum felis, id aliquet neque porta eu. Nulla aliquam, magna nec fringilla euismod, nulla est porttitor leo, vitae pharetra justo diam eget leo. Nullam et augue ut eros varius ultricies eu vitae est. Nunc vehicula mauris massa, non vestibulum velit pretium aliquet. Fusce in aliquam sapien. Aliquam id ipsum ac quam facilisis auctor. Nunc at purus vel quam tincidunt pellentesque. Integer luctus urna enim, eget congue neque lacinia sit amet.</p>  
+                      
+                      <div class="row ">
+                        <div class=" gap-2 d-md-flex mb-3">
+                          <div class="rate">
+                            <input type="radio" name="rate" value="5" />
+                            <label title="text">5 stars</label>
+                            <input type="radio" name="rate" value="4" />
+                            <label title="text">4 stars</label>
+                            <input type="radio" name="rate" value="3" checked="checked" />
+                            <label title="text">3 stars</label>
+                            <input type="radio" name="rate" value="2" />
+                            <label title="text">2 stars</label>
+                            <input type="radio" name="rate" value="1" />
+                            <label title="text">1 star</label>
+                          </div>
+                          <button class="btn btn-light" disabled>3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <br>
+
+
+                </ul>
+
+                
+                
+                
+
+              </div>
+
+              
+
+              
+
+              
+              
+
+
+
+              <div class="col-4 ">
+                <div class="card shadow">
+                  
+                  <div class="card-body">
+                    <h2 class="card-title text-center">Buy Tickets</h2>
+                
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item "><h6>Regular</h6>$10.00<select class="form-select mb-4 form-select-sm w-50 mx-auto" id="inputGroupSelect03" aria-label="Example select with button addon">
+                        <option selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select></li>
+                      <li class="list-group-item "><h6>Premium</h6>$15.00<select class="form-select mb-4 form-select-sm w-50 mx-auto" id="inputGroupSelect03" aria-label="Example select with button addon">
+                        <option selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+
+                      </select></li>
+                      <li class="list-group-item "><h6>VIP</h6>$25.00<select class="form-select mb-4 form-select-sm w-50 mx-auto" id="inputGroupSelect03" aria-label="Example select with button addon">
+                        <option selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select></li>
+                      <li class="list-group-item ">
+                        <h3 class="card-title text-center">Total Price</h3>
+                        <h4 class="card-title text-center">$100.00</h4>
+                        <br>
+                        <button class="btn btn-primary text-center mb-2" style="width: 100%" type="button">Buy</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+
+                
+
+
+              </div>
+
+
+              
+            </div>
+          </div>
+  </div>    
+
+
+
+
+
+
+
+
+
+
+<div class="border-bottom">
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Product</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Key Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Ticketing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Online Promotion</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Developers</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Explore More</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">How It Work</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Download App</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Promoter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sell Tickets</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Organiser</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fundraisers</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Connect With Us</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Customer Support</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Download App</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Promoter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2022 Miszoid, Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+
+</html>

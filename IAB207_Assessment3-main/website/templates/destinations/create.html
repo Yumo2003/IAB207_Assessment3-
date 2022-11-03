@@ -1,0 +1,322 @@
+<html>
+<head>
+<title>Muszoid - Home</title>
+<link href={{ url_for('static', filename='css/bootstrap.min.css') }} rel="stylesheet">
+<link href="css/headers.css" rel="stylesheet">
+<link href="css/5star.css" rel="stylesheet">
+<style>
+    .logo {
+        max-width: 100%;  
+        height: 45px;  
+    }
+
+    h1, p {
+        text-align: center;
+    }
+
+    .test {
+        object-fit:cover;
+        width: 1300;
+        height: 500;
+        }
+
+    .border-bottom {
+        background-color: white;
+        box-shadow: 0px 1px 10px #888888;
+
+    }
+
+    .mid {
+      text-align: center;
+    }
+
+    .test1 {
+      line-height: 50px;
+    }
+
+    .panel {
+      display:block;
+      text-decoration:none;
+    }
+
+</style>
+<script src="static/css/bootstrap.bundle.min.js"></script>
+</head>
+
+<link href={{ url_for('static', filename='static/css/headers') }} rel="stylesheet">
+<link href={{ url_for('static', filename='static/css/bootstrap.bundle.min.js') }} rel="stylesheet">
+
+
+<div class="bg-light"> 
+  
+  <div>
+    <header class="p-3 mb-3 border-bottom sticky-top">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <img class="logo" src="static/image/logo.png" alt="logo">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+          </a>
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/" class="nav-link px-5 link-secondary">Home</a></li>
+            <li><a href="{{ url_for('destination.create') }}" class="nav-link px-2 link-secondary">Create An Event</a></li>
+          </ul>
+  
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+          </form>
+  
+          <div class="dropdown text-end">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="static/image/icon.png" alt="mdo" width="32" height="32" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small">
+              {% if current_user.is_authenticated %}
+                <li><a class="dropdown-item" href="#">{{current_user.name}}</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="bookingpage.html">View Tickets</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{{ url_for('auth.logout') }}">Sign out</a></li>
+              {% else %}
+                <li><a class="dropdown-item" href="{{ url_for('auth.register') }}">Register</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('auth.login') }}">Log In</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+  </header>
+
+
+{% import "bootstrap/form.html" as wtf %}
+
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-12">
+
+        <h1>Add Travel Destination</h1>
+        <p>Enter a country that you will help clients travel to.</p>
+
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="container py-4">
+
+
+          
+    <div class="container mb-2">
+      <div class="row">
+        <div class="col ">
+          <ul class="list-group list-group-flush text-start">
+
+            <h2><b>Create an Event</b></h2>
+             
+            
+            
+            <div class="card shadow mb-5">
+              <div class="card-body ">
+                <h4 class="text-center for="eventName>General Info</h4> 
+                <div class="form-floating mb-2 w-75 mx-auto">
+                  <input type="email" class="form-control " id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">{{ form.eventName.label}}</label>
+                  
+                </div>
+
+                <div class="form-floating mb-2 w-75 mx-auto">
+                  <input type="email" class="form-control " id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">{{ form.venueLocation.label}}</label>
+                </div>
+
+
+                <div class="row g-0 mb-2 w-75 mx-auto">
+
+
+                  <div class="col">
+                    <div class="form-floating mx-0">
+                      <select class="form-select form-control" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected> </option>
+                        <option value="1">Rock</option>
+                        <option value="2">Jazz</option>
+                        <option value="3">Pop</option>
+                        <option value="4">...</option>
+                      </select>
+                      <label for="floatingSelect">{{ form.musicGenre.label}}</label>
+
+                      <div>{{ filename.variable }}</div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="row g-0 mb-2 w-75 mx-auto">
+                  <div class="col">
+                    <div class="form-floating mx-0">
+                      <input type="date" class="form-control " id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">{{ form.startDate.label}}</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-floating ms-2">
+                      <input type="date" class="form-control " id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">{{ form.endDate.label}}</label>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="row g-0 mb-2 w-75 mx-auto">
+                  <div class="col">
+                    <div class="form-floating mx-0">
+                      <input type="time" class="form-control " id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">{{ form.startTime.label}}</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-floating ms-2">
+                      <input type="time" class="form-control " id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">{{ form.endTime.label}}</label>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="input-group g-0 mb-2 w-75 mx-auto ">
+                  <div class="form-floating">
+                    <input type="number" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                    <label for="floatingInputGroup1">{{ form.ticketPrice.label}}</label>
+                  </div>
+                  
+                  <div class="form-floating">
+                      <input type="number" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                      <label for="floatingInputGroup1">{{ form.totalTickets.label}}</label>
+                    </div>
+
+                </div>
+
+
+              </div>
+            </div>
+
+
+
+            
+
+
+            
+
+
+            <div class="card shadow mb-5">
+              <div class="card-body ">
+                <h4 class="text-center">Event Page Info</h4> 
+                <h6 class="g-0 mb-2 w-75 mx-auto">{{ form.image.label}}</h6> 
+                <div class="input-group g-0 mb-2 w-75 mx-auto">
+                  
+                  <div class="form-control" type = "file">
+                    {{ form.image}}
+                  </div>
+                  
+                  
+                </div>
+
+               
+
+                <div class="form-floating mb-2 w-75 mx-auto">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                  <label for="floatingTextarea2">{{ form.description.label}}</label>
+                </div>
+                <div class="form-floating mb-2 w-75 mx-auto">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                  <label for="floatingTextarea2">{{ form.overview.label}}</label>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="btn btn-primary btn-lg w-75 mx-auto">{{ form.submit}}</div>
+            
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+</div>    
+
+
+
+
+</div>  
+</div>
+</body>
+<div class="border-bottom ">
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Product</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Key Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Ticketing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Online Promotion</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Developers</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Explore More</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">How It Work</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Download App</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Promoter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sell Tickets</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Organiser</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fundraisers</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Connect With Us</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Customer Support</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Download App</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Event Promoter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2022 Miszoid, Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+
+</html>
+
